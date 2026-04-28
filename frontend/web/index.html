@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Kinetix AI - Intelligent Supply Chain Optimization">
+
+  <!--
+    Content Security Policy: allow Flutter CanvasKit from gstatic.com, tile
+    images from CartoCDN (primary) and OpenStreetMap (fallback), and Google Fonts.
+
+    IMPORTANT: tile.openstreetmap.org does NOT send CORS headers, so it cannot
+    be used as a tile source in Flutter Web (CanvasKit WebGL texture loader
+    requires Access-Control-Allow-Origin: *). CartoCDN sends CORS headers on
+    every tile and is the correct Flutter Web tile source.
+  -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data:;
+                 script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:
+                   https://www.gstatic.com;
+                 img-src 'self' data: blob:
+                   https://*.basemaps.cartocdn.com
+                   https://*.tile.openstreetmap.org
+                   https://*.openstreetmap.fr
+                   https://*.tile.openstreetmap.fr;
+                 connect-src 'self' http://localhost:* https: wss: ws: blob:;
+                 font-src 'self' https://fonts.gstatic.com data:;
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+                 worker-src 'self' blob:;">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="kinetix_ai">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>kinetix_ai</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

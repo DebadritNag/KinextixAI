@@ -1,0 +1,195 @@
+# =============================================================================
+# Kinetix AI — root .gitignore
+# Covers: Python backend, Flutter/Dart frontend, IDEs, OS files
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# IDE / Editor
+# -----------------------------------------------------------------------------
+.kiro/
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.fleet/
+.cursor/
+
+# -----------------------------------------------------------------------------
+# OS
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# -----------------------------------------------------------------------------
+# Python / Backend
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+
+# pytest
+.pytest_cache/
+.cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+nosetests.xml
+test-results/
+
+# mypy / type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Distribution / packaging
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# -----------------------------------------------------------------------------
+# Flutter / Dart / Frontend
+# -----------------------------------------------------------------------------
+
+# Build outputs
+frontend/build/
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.packages
+frontend/pubspec.lock
+
+# Generated files
+frontend/**/*.g.dart
+frontend/**/*.freezed.dart
+frontend/**/*.mocks.dart
+
+# iOS
+frontend/ios/Pods/
+frontend/ios/.symlinks/
+frontend/ios/Flutter/Flutter.framework
+frontend/ios/Flutter/Flutter.podspec
+frontend/ios/Runner/GeneratedPluginRegistrant.*
+frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/
+frontend/ios/Flutter/App.framework
+frontend/ios/Flutter/engine/
+frontend/ios/ServiceDefinitions.json
+frontend/ios/Runner/GeneratedPluginRegistrant.h
+frontend/ios/Runner/GeneratedPluginRegistrant.m
+
+# Android
+frontend/android/.gradle/
+frontend/android/captures/
+frontend/android/gradlew
+frontend/android/gradlew.bat
+frontend/android/local.properties
+frontend/android/**/GeneratedPluginRegistrant.java
+frontend/android/key.properties
+frontend/android/**/*.keystore
+frontend/android/**/*.jks
+
+# macOS
+frontend/macos/Flutter/GeneratedPluginRegistrant.swift
+frontend/macos/Flutter/Flutter-Debug.xcconfig
+frontend/macos/Flutter/Flutter-Release.xcconfig
+frontend/macos/Flutter/ephemeral/
+
+# Windows
+frontend/windows/flutter/generated_plugin_registrant.cc
+frontend/windows/flutter/generated_plugin_registrant.h
+frontend/windows/flutter/generated_plugins.cmake
+
+# Linux
+frontend/linux/flutter/generated_plugin_registrant.cc
+frontend/linux/flutter/generated_plugin_registrant.h
+frontend/linux/flutter/generated_plugins.cmake
+
+# Web
+frontend/web/flutter_service_worker.js
+
+# Dart analysis
+frontend/.dart_tool/
+
+# -----------------------------------------------------------------------------
+# Node / JS (if any tooling is added)
+# -----------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+.pnp.*
+.pnp.js
+
+# -----------------------------------------------------------------------------
+# Logs & temp files
+# -----------------------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.history/
+
+# -----------------------------------------------------------------------------
+# Secrets & credentials (never commit these)
+# -----------------------------------------------------------------------------
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+service-account*.json
+
+# -----------------------------------------------------------------------------
+# ML models (large binary files — use Git LFS or exclude entirely)
+# -----------------------------------------------------------------------------
+backend/models/*.pkl
+backend/models/*.h5
+backend/models/*.pt
+backend/models/*.onnx
+# Keep the .gitkeep and small JSON test models
+!backend/models/.gitkeep
+!backend/models/*.json
