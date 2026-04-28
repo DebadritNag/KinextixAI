@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: ./backend
+    container_name: kinetix-backend
+    env_file: ./backend/.env
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: kinetix-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
